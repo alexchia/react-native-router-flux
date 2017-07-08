@@ -35,6 +35,9 @@ const TabView = (props) => {
       {props.name === 'tab2_1' &&
         <Button onPress={()=>Actions.tab2_2()}>next screen for tab2_1</Button>
       }
+      {props.name == 'tab2_2' &&
+        <Button onPress={() => { Actions.reset('launch'); }}>Logout and back to Launch screen</Button>
+      }
       <Button onPress={Actions.pop}>Back</Button>
       <Button onPress={() => { Actions.tab1(); }}>Switch to tab1</Button>
       <Button onPress={() => { Actions.tab2(); }}>Switch to tab2</Button>
